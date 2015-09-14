@@ -9,11 +9,11 @@ class ComicsController < ApplicationController
 	end
 
 	def new
-		@comic = Comic.new
+		@comic = current_user.comics.build
 	end
 
 	def create
-		@comic = Comic.new(comic_params)
+		@comic = current_user.comics.build(comic_params)
 		
 		if @comic.save
 			redirect_to @comic, notice: 'Successfully created new comic strip'
