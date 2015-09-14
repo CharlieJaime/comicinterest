@@ -29,6 +29,8 @@ gem 'haml', '~> 4.0.7'
 gem 'bootstrap-sass', '~> 3.3.5.1'
 # This is used for devise gem
 gem 'devise', '~> 3.5.2'
+# This is used for paperclip
+gem 'paperclip', '~> 4.3.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
