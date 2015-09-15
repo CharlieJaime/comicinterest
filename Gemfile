@@ -31,6 +31,8 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'devise', '~> 3.5.2'
 # This is used for paperclip
 gem 'paperclip', '~> 4.3.1'
+# This is used for Masonry
+gem 'masonry-rails', '~> 0.2.4'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

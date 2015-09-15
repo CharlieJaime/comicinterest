@@ -1,10 +1,21 @@
-= image_tag @comic.image.url(:medium)
-%h1= @comic.title
-%p=@comic.description
-%p
-Submitted by
-= @comic.user.email
-
-= link_to 'Back', root_path
-= link_to 'Edit', edit_comic_path
-= link_to 'Delete', comic_path, method: :delete, data: {confirm: 'Are you sure?'} 
+#comic_show.row
+	.col-md-8.col-md-offset-2
+		.panel.panel-default
+			.panel-heading.comic_image 
+				= image_tag @comic.image.url
+			.panel-body	
+				%h1= @comic.title
+				%p.description=@comic.description
+				%p
+				Submitted by
+				= @comic.user.email
+			.panel-footer
+				.row
+					.col-md-6
+						Submitted by
+						= @comic.user.email
+					.col-md-6
+						.btn-group.pull-right
+							= link_to 'Back', root_path, class: 'btn btn-default'
+							= link_to 'Edit', edit_comic_path, class: 'btn btn-default'
+							= link_to 'Delete', comic_path, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-default' 
