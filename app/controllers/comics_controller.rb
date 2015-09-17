@@ -1,5 +1,7 @@
 class ComicsController < ApplicationController
-	before_action :find_comic, only: [:show, :edit, :update, :destroy]
+	before_action :find_comic, only: [:show, :edit, :update, :destroy, :upvote]
+	before_action :authenticate_user!, expect: [:index, :show]
+	
 	def index
 		@comics = Comic.all.order('created_at DESC')
 	end
@@ -37,6 +39,11 @@ class ComicsController < ApplicationController
 	def destroy
 		@comic.destroy
 		redirect_to root_path
+	end
+
+	def upvote
+		@comic.upvote_by current_user
+		redirect_to :back
 	end
 
 	private

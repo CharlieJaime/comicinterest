@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :comics
+  resources :comics do
+    member do
+      put 'like', to: 'comics#upvote'
+    end
+  end
 
   root 'comics#index'
   # The priority is based upon order of creation: first created -> highest priority.

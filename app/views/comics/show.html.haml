@@ -16,6 +16,10 @@
 						= @comic.user.email
 					.col-md-6
 						.btn-group.pull-right
-							= link_to 'Back', root_path, class: 'btn btn-default'
-							= link_to 'Edit', edit_comic_path, class: 'btn btn-default'
-							= link_to 'Delete', comic_path, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-default' 
+							= link_to like_comic_path(@comic), method: :puts, class: 'btn btn-default' do
+								%span.glyphicon.glyphicon-heart
+								= @comic.get_upvotes.size
+							-if user_signed_in?
+								= link_to 'Back', root_path, class: 'btn btn-default'
+								= link_to 'Edit', edit_comic_path, class: 'btn btn-default'
+								= link_to 'Delete', comic_path, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-default'

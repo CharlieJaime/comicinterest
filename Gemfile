@@ -33,6 +33,8 @@ gem 'devise', '~> 3.5.2'
 gem 'paperclip', '~> 4.3.1'
 # This is used for Masonry
 gem 'masonry-rails', '~> 0.2.4'
+# This is used for acts_as_votable
+gem 'acts_as_votable', '~> 0.10.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
