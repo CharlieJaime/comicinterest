@@ -1,28 +1,14 @@
 == README
+This is the second part of a three part series to replicate popular web applications; Wordpress blog, Pininterest, and Evernote.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Part Two: Pininterest
+The main point to this project was to help build on concepts of the Wordpress blog and ingrain steps/ concepts. Also its used to introduce new gems and make coding and responsive design more fluent. (This Pininterest has my own personal twist other than the name Comicinterest). This was broken into a couple of steps:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+1. Creating new Rails app and then comics controller with the introduction of simple_form gem
+2. Added created, show, and edit functions and views
+3. Added Destroy(function/view) and users
+4. User associations and few styling changes 
+5. Added function to upload images using paperclip gem
+6. Added for styling along with jQuery masonry gem for responsive comics 
+7. Votable gem added to vote comic pins
+8. Finally added more styling to several forms edit, show, new, etc.
