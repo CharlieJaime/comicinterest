@@ -24,4 +24,17 @@
 		- flash.each do |name, msg|
 			=content_tag :div, msg, class: 'alert alert-info'
 
+		- if user_signed_in?
+		- else
+			.container
+				%h1#welcomeheader Welcome to ThinkComics.
+
 		= yield
+
+		- if user_signed_in?
+		- else
+			.container
+				%div#welcomeContainer
+					%p Where you can save your Comic art ranging from conceptual to finished products. <br> Join today, create an account for FREE and start posting your art.
+			.container
+				#homeimg=image_tag 'Examples.png'
