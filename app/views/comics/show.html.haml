@@ -1,14 +1,12 @@
 #comic_show.row
 	.col-md-8.col-md-offset-2
 		.panel.panel-default
-			.panel-heading.comic_image 
+			.panel-heading.comic_image
 				= image_tag @comic.image.url
-			.panel-body	
+			.panel-body
 				%h1= @comic.title
+				%h4 Description
 				%p.description=@comic.description
-				%p
-				Submitted by
-				= @comic.user.email
 			.panel-footer
 				.row
 					.col-md-6
@@ -16,7 +14,7 @@
 						= @comic.user.email
 					.col-md-6
 						.btn-group.pull-right
-							= link_to like_comic_path(@comic), method: :puts, class: 'btn btn-default' do
+							= link_to like_comic_path(@comic), method: :put, class: 'btn btn-default' do
 								%span.glyphicon.glyphicon-heart
 								= @comic.get_upvotes.size
 							-if user_signed_in?
