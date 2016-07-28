@@ -2,7 +2,7 @@
 	- if @comic.errors.any?
 		#errors
 			%h2
-			= pluaralize(@comic.errors.count, 'error')
+			= pluralize(@comic.errors.count, 'error')
 			prevented this comic from saving
 			%ul
 				- @comic.errors.full_messages.each do |msg|
